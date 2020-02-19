@@ -5,8 +5,6 @@
  */
 package arithmetic;
 
-import java.util.Scanner;
-
 /** This class takes String input plus,minus,divide and times
  * from user and execute the arithmetic operation
  * change the code to use enum instead String and add object oriented principles satisfy as comment in the code
@@ -15,12 +13,9 @@ import java.util.Scanner;
  */
 public class ArithmeticBase 
 {
- public double x,y;
-    double calculate(double x, double y) 
+ private enum operations {PLUS, MINUS, TIMES, DIVIDE};
+    public double calculate(double x, double y, String s) 
         {
-        Scanner sc =new Scanner(System.in);
-        System.out.println("enter String");
-        String s= sc.next();
         switch (s.toUpperCase()) 
         {
             case "PLUS":
